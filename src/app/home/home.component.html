@@ -1,0 +1,173 @@
+<div class="row">
+  <div class="col-12">
+    <mat-card>
+      <mat-card-title>Part II: To be completed by RN</mat-card-title>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field appearance="fill">
+            <mat-label>วันจัดจำหน่าย</mat-label>
+            <input matInput [matDatepicker]="picker1" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <input style="height: 35px;" aria-label="default time" [ngxTimepicker]="defaultValue" readonly
+            [(ngModel)]="time">
+          <ngx-material-timepicker #defaultValue></ngx-material-timepicker>
+        </div>
+
+        <div class="col-12">
+          <p>จำหน่ายไป
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button style="padding-left: 2.4rem;" value="1">บ้าน</mat-radio-button>
+              <mat-radio-button style="padding-left: 4.1rem;" value="2">ที่อื่น </mat-radio-button>
+            </mat-radio-group>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+          </p>
+        </div>
+
+        <div class="col-12">
+          <p>เคลื่อนย้ายโดย
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">ผู้ป่วยเดินเอง</mat-radio-button>
+              <mat-radio-button value="2">รถเข็นนำส่งผู้ป่วย </mat-radio-button>
+              <mat-radio-button value="3">เปลนำส่งผู้ป่วย</mat-radio-button>
+              <mat-radio-button value="4">อื่น ๆ </mat-radio-button>
+            </mat-radio-group>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+          </p>
+        </div>
+
+        <div class="col-12">
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>วินิจฉัยโรค</mat-label>
+            <input matInput placeholder="วินิจฉัยโรค">
+          </mat-form-field>
+        </div>
+
+        <div class="col-12">
+          <mat-form-field class="example-full-width" style="width: 100%;">
+            <mat-label>หัตถการ/การผ่าตัด</mat-label>
+            <input matInput placeholder="หัตถการ/การผ่าตัด">
+          </mat-form-field>
+        </div>
+
+      </div>
+    </mat-card>
+  </div>
+
+  <div class="col-12 mt-2">
+    <mat-card>
+      <mat-card-title>สัญญาชีพ</mat-card-title>
+      <div class="row">
+        <div class="col-12" style="padding-left: 2rem;">
+
+          <div class="row">
+            <div class="col-auto">
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">ไม่มีไข้</mat-radio-button>
+                <mat-radio-button style="padding-left: 6.5rem;" value="2">มีไข้ </mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="col-auto mr-auto">
+              <div class="row">
+                <div class="col-auto" style="margin-right: -30px;">
+                  <p>ชีพจร </p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <mat-form-field style="width: 150px;" class="example-full-width">
+                    <input matInput placeholder="" value="">
+                  </mat-form-field>
+                </div>
+                <div class="col-auto">
+                  <p>/นาที </p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <p>หายใจ </p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <mat-form-field style="width: 150px;" class="example-full-width">
+                    <input matInput placeholder="" value="">
+                  </mat-form-field>
+                </div>
+                <div class="col-auto">
+                  <p>/นาที</p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <p>ความดันโลหิต </p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <mat-form-field style="width: 100px;" class="example-full-width">
+                    <input matInput placeholder="" value="">
+                  </mat-form-field>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <p>/ </p>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <mat-form-field style="width: 100px;" class="example-full-width">
+                    <input matInput placeholder="" value="">
+                  </mat-form-field>
+                </div>
+                <div class="col-auto" style="margin-right: -30px;">
+                  <p>มม.  ปรอท</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <mat-card-title>คำแนะนำเมื่อจำหน่าย</mat-card-title>
+      <div class="row">
+        <div class="col-12" style="padding-left: 3rem; margin-bottom: -10px;">
+          <p>- อาหาร
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button style="padding-left: 3.5rem;" value="1">ปกติ</mat-radio-button>
+              <mat-radio-button value="2">อาหารเฉพาะโรค </mat-radio-button>
+            </mat-radio-group>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="col-12" style="padding-left: 3rem; margin-bottom: -10px;">
+          <p>- กิจวัตร
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button style="padding-left: 3.5rem;" value="1">ปกติ</mat-radio-button>
+              <mat-radio-button value="2">จำกัด </mat-radio-button>
+            </mat-radio-group>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="col-12" style="padding-left: 3rem; margin-bottom: -10px;">
+          <p>- ออกกำลังกาย
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">ปกติ</mat-radio-button>
+              <mat-radio-button value="2">จำกัด </mat-radio-button>
+            </mat-radio-group>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="" value="">
+            </mat-form-field>
+          </p>
+        </div>
+
+
+
+      </div>
+      <mat-card-title>ความรู้พิเศษที่แนะนำเมื่อจำหน่าย</mat-card-title>
+    </mat-card>
+  </div>
+</div>
