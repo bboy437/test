@@ -220,7 +220,8 @@
               <mat-checkbox class="example-margin" style="padding-left: 5.7rem;" [(ngModel)]="special_knowledge.sp8">
                 อื่น ๆ</mat-checkbox>
               <mat-form-field class="example-full-width  w-500px">
-                <input matInput placeholder="" [disabled]="!special_knowledge.sp8" [(ngModel)]="special_knowledge.other">
+                <input matInput placeholder="" [disabled]="!special_knowledge.sp8"
+                  [(ngModel)]="special_knowledge.other">
               </mat-form-field>
             </section>
 
@@ -231,18 +232,18 @@
         <div class="row">
           <div class="col-12" style="padding-left: 3rem; margin-bottom: -10px;">
             <section class="example-section">
-              <mat-checkbox class="example-margin">การดูแลแผล</mat-checkbox>
-              <mat-checkbox class="example-margin" style="padding-left: 6.1rem;">ดูแลสายให้อาหาร</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="special_care.sp_c1">การดูแลแผล</mat-checkbox>
+              <mat-checkbox class="example-margin" style="padding-left: 6.1rem;"  [(ngModel)]="special_care.sp_c2">ดูแลสายให้อาหาร</mat-checkbox>
             </section>
             <section class="example-section">
-              <mat-checkbox class="example-margin">ดูแลท่อหายใจ</mat-checkbox>
-              <mat-checkbox class="example-margin" style="padding-left: 5.5rem;">การดูแลสายสวนปัสสวะ</mat-checkbox>
+              <mat-checkbox class="example-margin"  [(ngModel)]="special_care.sp_c3">ดูแลท่อหายใจ</mat-checkbox>
+              <mat-checkbox class="example-margin" style="padding-left: 5.5rem;"  [(ngModel)]="special_care.sp_c4">การดูแลสายสวนปัสสวะ</mat-checkbox>
             </section>
             <section class="example-section" style="margin-top: -0.5rem;">
-              <mat-checkbox class="example-margin">ดูแลเผือก</mat-checkbox>
-              <mat-checkbox class="example-margin" style="padding-left: 7.14rem;">อื่น ๆ</mat-checkbox>
+              <mat-checkbox class="example-margin"  [(ngModel)]="special_care.sp_c5">ดูแลเผือก</mat-checkbox>
+              <mat-checkbox class="example-margin" style="padding-left: 7.14rem;"  [(ngModel)]="special_care.sp_c6">อื่น ๆ</mat-checkbox>
               <mat-form-field class="example-full-width  w-500px">
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" [disabled]="!special_care.sp_c6"  [(ngModel)]="special_care.other">
               </mat-form-field>
             </section>
           </div>
