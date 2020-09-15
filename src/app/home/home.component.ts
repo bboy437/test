@@ -19,6 +19,21 @@ export class HomeComponent implements OnInit {
   _move: string = "";
   _move_note: string;
 
+  _diagnose: string = "";
+  _surgery: string = "";
+
+  _fever: string = "";
+  _pulse: string = "";
+  _breathe: string = "";
+  _blood_pressure_from: string = "";
+  _blood_pressure_to: string = "";
+
+  _food: string = "";
+  _food_note: string = "";
+  _practice: string = "";
+  _practice_note: string = "";
+  _exercise: string = "";
+  _exercise_note: string = "";
 
   test: boolean;
   test1: boolean;
