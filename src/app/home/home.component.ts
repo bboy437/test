@@ -8,8 +8,14 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
-  date = new FormControl(new Date());
+  release_date = new FormControl(new Date());
+  date1 = new FormControl(new Date());
+  date2 = new FormControl(new Date());
   time: any;
+
+  disposed_of
+
+
 
   test: boolean;
   test1: boolean;
