@@ -13,13 +13,16 @@ export class HomeComponent implements OnInit {
   date2 = new FormControl(new Date());
   time: any;
 
-  disposed_of
+  disposed_of: string = "";
+  disposed_other_note: string;
 
+  _move: string = "";
+  _move_note: string;
 
 
   test: boolean;
   test1: boolean;
-  
+
   constructor() { }
 
   ngOnInit(): void {

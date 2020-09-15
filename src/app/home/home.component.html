@@ -45,20 +45,20 @@
 
           <div class="col-12" style="margin-bottom: -10px;">
             <p>จำหน่ายไป
-              <mat-radio-group aria-label="Select an option">
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="disposed_of">
                 <mat-radio-button style="padding-left: 2.4rem;" value="1">บ้าน</mat-radio-button>
                 <mat-radio-button style="padding-left: 4.1rem;" value="2">ที่อื่น </mat-radio-button>
               </mat-radio-group>
 
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" [disabled]="disposed_of == '1' || !disposed_of" [(ngModel)]="disposed_other_note">
               </mat-form-field>
             </p>
           </div>
 
           <div class="col-12" style="margin-bottom: -10px;">
             <p>เคลื่อนย้ายโดย
-              <mat-radio-group aria-label="Select an option">
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="_move">
                 <mat-radio-button value="1">ผู้ป่วยเดินเอง</mat-radio-button>
                 <mat-radio-button value="2">รถเข็นนำส่งผู้ป่วย </mat-radio-button>
                 <mat-radio-button value="3">เปลนำส่งผู้ป่วย</mat-radio-button>
@@ -66,7 +66,7 @@
               </mat-radio-group>
 
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" [disabled]="_move != '4' || !_move " [(ngModel)]="_move_note">
               </mat-form-field>
             </p>
           </div>
