@@ -35,6 +35,18 @@ export class HomeComponent implements OnInit {
   _exercise: string = "";
   _exercise_note: string = "";
 
+  special_knowledge = {
+    sp1: false,
+    sp2: false,
+    sp3: false,
+    sp4: false,
+    sp5: false,
+    sp6: false,
+    sp7: false,
+    sp8: false,
+    other: '',
+  };
+
   test: boolean;
   test1: boolean;
 
