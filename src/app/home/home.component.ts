@@ -56,6 +56,7 @@ export class HomeComponent implements OnInit {
 
   onchange(event) {
     console.log(event)
+    console.log(this.release_date.value)
   }
 
 }
