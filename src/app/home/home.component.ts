@@ -35,23 +35,18 @@ export class HomeComponent implements OnInit {
   _exercise: string = "";
   _exercise_note: string = "";
 
-  // special_knowledge = {
-  //   sp1: false,
-  //   sp2: false,
-  //   sp3: false,
-  //   sp4: false,
-  //   sp5: false,
-  //   sp6: false,
-  //   sp7: false,
-  //   sp8: false,
-  //   other: '',
-  // };
-
   special_knowledge: any = [];
   special_care: any = [];
+  is_ER: any = [];
 
-  test: boolean;
-  test1: boolean;
+  _history_summary: string = "";
+  _medical_certificate: string = "";
+
+  _patient_signature: string;
+  _nurse_signature: string;
+
+
+
 
   constructor() { }
 
@@ -61,7 +56,6 @@ export class HomeComponent implements OnInit {
 
   onchange(event) {
     console.log(event)
-    console.log(this.test)
   }
 
 }

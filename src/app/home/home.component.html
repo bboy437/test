@@ -258,25 +258,25 @@
         <section class="example-section" style="padding-bottom: 0.5rem;">
           <div class="row">
             <div class="col-6">
-              <mat-checkbox class="example-margin">ไข้สูง มากกว่า 38°C หรือ 101°F</mat-checkbox><br>
-              <mat-checkbox class="example-margin">ปวดศีรษะรุนแรง</mat-checkbox><br>
-              <mat-checkbox class="example-margin">อาการปวดรุนแรง</mat-checkbox><br>
-              <mat-checkbox class="example-margin">คลื่นไส้ อาเจียน ท้องเสีย</mat-checkbox><br>
-              <mat-checkbox class="example-margin">เลือดออก</mat-checkbox><br>
-              <mat-checkbox class="example-margin">ซึมลง สับสน หรือหมดสติ</mat-checkbox><br>
-              <mat-checkbox class="example-margin">เป็นลม หน้ามืด</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er1">ไข้สูง มากกว่า 38°C หรือ 101°F</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er2">ปวดศีรษะรุนแรง</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er3">อาการปวดรุนแรง</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er4">คลื่นไส้ อาเจียน ท้องเสีย</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er5">เลือดออก</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er6">ซึมลง สับสน หรือหมดสติ</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er7">เป็นลม หน้ามืด</mat-checkbox><br>
             </div>
             <div class="col-6">
-              <mat-checkbox class="example-margin">หายใจลำบาก หอบเหนื่อย</mat-checkbox><br>
-              <mat-checkbox class="example-margin">เจ็บหน้าอกรุนแรง</mat-checkbox><br>
-              <mat-checkbox class="example-margin">มีผื่นผิวหนัง</mat-checkbox><br>
-              <mat-checkbox class="example-margin">ตาเหลือง ตัวเหลือง ปัสสาวะเข้ม</mat-checkbox><br>
-              <mat-checkbox class="example-margin">แผลบวม หรือแผลแยก</mat-checkbox><br>
-              <mat-checkbox class="example-margin">อาการที่แย่กว่าเดิม</mat-checkbox><br>
-              <mat-checkbox class="example-margin">ปัสสาวะแสบขัด ปัสสาวะเป็นเลือด</mat-checkbox><br>
-              <mat-checkbox class="example-margin">อื่น ๆ</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er8">หายใจลำบาก หอบเหนื่อย</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er9">เจ็บหน้าอกรุนแรง</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er10">มีผื่นผิวหนัง</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er11">ตาเหลือง ตัวเหลือง ปัสสาวะเข้ม</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er12">แผลบวม หรือแผลแยก</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er13">อาการที่แย่กว่าเดิม</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er14">ปัสสาวะแสบขัด ปัสสาวะเป็นเลือด</mat-checkbox><br>
+              <mat-checkbox class="example-margin" [(ngModel)]="is_ER.er15">อื่น ๆ</mat-checkbox>
               <mat-form-field class="example-full-width  w-500px">
-                <input matInput placeholder="" value="">
+                <input matInput placeholder="" [disabled]="!is_ER.er15" [(ngModel)]="is_ER.other">
               </mat-form-field>
             </div>
           </div>
@@ -295,7 +295,7 @@
     <div class="col-12 mt-3">
       <mat-card>
         <mat-card-title>เอกสารที่ได้รับ</mat-card-title>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="_history_summary">
           <div class="row" style="padding-left: 3rem;">
             <div class="col-2">
               <p>1. สรุปประวัติ</p>
@@ -311,7 +311,7 @@
             </div>
           </div>
         </mat-radio-group>
-        <mat-radio-group aria-label="Select an option">
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="_medical_certificate">
           <div class="row" style="padding-left: 3rem;">
             <div class="col-2">
               <p>1. ใบรับรองแพทย์</p>
@@ -336,7 +336,7 @@
           <div class="col-6">
             <mat-form-field class="example-full-width" style="width: 100%;">
               <mat-label>ลายเซ็นผู้ป่วย/ญาติ</mat-label>
-              <input matInput>
+              <input matInput [(ngModel)]="_patient_signature">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>วันที่</mat-label>
@@ -348,7 +348,7 @@
           <div class="col-6">
             <mat-form-field class="example-full-width" style="width: 100%;">
               <mat-label>ลายเซ็นพยาบาล</mat-label>
-              <input matInput>
+              <input matInput  [(ngModel)]="_nurse_signature">
             </mat-form-field>
             <mat-form-field appearance="fill">
               <mat-label>วันที่</mat-label>
